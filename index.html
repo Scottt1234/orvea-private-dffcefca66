@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
-<title>ORVÉA Private · Technology Approach</title>
+<title>ORVÉA Private · Technology recommendation and rationale</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@ html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 ::selection{background:rgba(189,154,106,0.3);color:var(--cream)}
 
-/* caps title system (deck) */
+/* caps title system */
 .caps{font-family:var(--caps);text-transform:uppercase;letter-spacing:0.13em;font-weight:600}
 .kicker{font-family:var(--caps);font-size:11px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:var(--gold)}
 .serif-it{font-family:var(--serif);font-style:italic}
@@ -51,27 +51,30 @@ nav.scrolled{background:rgba(11,11,11,0.86);backdrop-filter:blur(14px);border-bo
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
   padding:130px 26px 90px;position:relative;
   background:radial-gradient(ellipse 70% 55% at 50% 42%,rgba(58,48,42,0.5),transparent 72%),var(--black)}
-.hero .kicker{margin-bottom:40px;animation:fade 1s ease both}
-.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(3rem,8.2vw,6.4rem);line-height:1;color:var(--cream);letter-spacing:0.01em;animation:fade 1.1s ease .12s both}
-.hero .rule{width:64px;height:1px;background:var(--gold);margin:42px auto;animation:fade 1.1s ease .3s both}
-.hero .lead{max-width:680px;font-size:clamp(1.05rem,2.1vw,1.32rem);color:var(--cream);font-weight:300;line-height:1.6;animation:fade 1.1s ease .42s both}
-.hero .lead .soft{color:var(--text)}
+.hero .wordmark{font-family:var(--serif);font-weight:400;font-size:clamp(3.4rem,11vw,7.6rem);line-height:.95;color:var(--cream);letter-spacing:0.02em;animation:fade 1.1s ease .1s both}
+.hero .wm-private{display:flex;align-items:center;justify-content:center;gap:20px;width:min(440px,82%);margin:18px auto 0;animation:fade 1.1s ease .26s both}
+.hero .wm-private .wm-line{flex:1;height:1px;background:var(--gold);opacity:.85}
+.hero .wm-private .wm-txt{font-family:var(--caps);font-weight:600;font-size:clamp(.78rem,1.9vw,1.05rem);letter-spacing:0.66em;text-transform:uppercase;color:var(--gold);padding-left:0.66em;white-space:nowrap}
+.hero .tagline{font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,2.6vw,1.7rem);color:var(--cream);margin-top:30px;animation:fade 1.1s ease .42s both}
+.hero .tagline em{color:var(--gold);font-style:italic}
+.hero .rule{width:64px;height:1px;background:var(--gold);margin:34px auto;animation:fade 1.1s ease .54s both}
+.hero .hero-kicker{font-family:var(--caps);font-size:11px;font-weight:600;letter-spacing:0.32em;text-transform:uppercase;color:var(--muted);animation:fade 1.1s ease .66s both}
 .scroll-cue{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);font-family:var(--caps);font-size:9px;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);animation:fade 1s ease 1.1s both}
 .scroll-cue .bar{width:1px;height:38px;background:linear-gradient(var(--gold),transparent);margin:12px auto 0}
 @keyframes fade{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 
 /* ---------- section frame ---------- */
 section.sec{padding:104px 46px;max-width:1120px;margin:0 auto;position:relative}
-.sec-head{margin-bottom:50px;max-width:840px}
+.sec-head{margin-bottom:46px;max-width:860px}
 .sec-head .kicker{display:block;margin-bottom:16px}
 .sec-head h2{font-family:var(--caps);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;
-  font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.05;color:var(--cream)}
+  font-size:clamp(1.8rem,4.2vw,2.85rem);line-height:1.06;color:var(--cream)}
 .sec-head .hr{width:120px;height:1px;background:var(--gold);margin:22px 0 18px;opacity:.7}
 .sec-head .sub{font-family:var(--serif);font-style:italic;font-size:clamp(1.05rem,2.2vw,1.4rem);color:var(--muted)}
 .body-copy{max-width:780px}
-.body-copy p{font-size:1.06rem;margin-bottom:20px;color:var(--text)}
+.body-copy p{font-size:1.04rem;margin-bottom:18px;color:var(--text)}
 .body-copy p:last-child{margin-bottom:0}
-.lead-line{font-size:1.2rem !important;color:var(--cream) !important}
+.lead-line{font-size:1.18rem !important;color:var(--cream) !important}
 
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
 .reveal.in{opacity:1;transform:none}
@@ -80,121 +83,137 @@ section.sec{padding:104px 46px;max-width:1120px;margin:0 auto;position:relative}
 .divider .l{width:50px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));align-self:center;margin:0 16px}
 .divider .l.r{background:linear-gradient(90deg,var(--gold),transparent)}
 
-/* thesis / callout box (deck) */
-.thesis{border:1px solid var(--line);background:linear-gradient(160deg,rgba(58,48,42,0.34),transparent);padding:34px 38px;margin-top:42px}
+/* thesis / callout */
+.thesis{border:1px solid var(--line);background:linear-gradient(160deg,rgba(58,48,42,0.34),transparent);padding:32px 36px;margin-top:40px}
 .thesis .kicker{display:block;margin-bottom:14px}
-.thesis p{font-size:1.08rem;color:var(--cream);font-weight:300}
+.thesis p{font-size:1.06rem;color:var(--cream);font-weight:300}
 .thesis .big{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--cream);margin-bottom:8px;display:block}
 
-/* ---------- 02 signature ---------- */
-.moat-stage{display:grid;grid-template-columns:0.85fr 1fr;gap:46px;align-items:center;margin-top:14px;
-  border:1px solid var(--line-soft);background:linear-gradient(160deg,var(--panel),var(--ink));padding:46px 44px}
-.house-wrap{display:flex;justify-content:center}
-.house{width:100%;max-width:280px}
-.house .stroke{stroke:var(--gold);stroke-width:1.4;fill:none;stroke-linecap:round;stroke-linejoin:round;
-  stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.1s ease}
-.house .fillzone{fill:var(--brown);opacity:0;transition:opacity 1s ease 1.2s}
-.moat-stage.live .house .fillzone{opacity:.5}
-.moat-stage.live .r0{transition-delay:0s;stroke-dashoffset:0}
-.moat-stage.live .r1{transition-delay:.35s;stroke-dashoffset:0}
-.moat-stage.live .r2{transition-delay:.7s;stroke-dashoffset:0}
-.moat-stage.live .r3{transition-delay:.95s;stroke-dashoffset:0}
-.fields{display:flex;flex-direction:column;gap:0}
-.field{display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--line-soft);
-  opacity:0;transform:translateX(18px);transition:opacity .6s ease,transform .6s ease}
-.moat-stage.live .field{opacity:1;transform:none}
-.moat-stage.live .field:nth-child(1){transition-delay:1.5s}
-.moat-stage.live .field:nth-child(2){transition-delay:1.75s}
-.moat-stage.live .field:nth-child(3){transition-delay:2s}
-.moat-stage.live .field:nth-child(4){transition-delay:2.25s}
-.field .dot{width:7px;height:7px;background:var(--gold);transform:rotate(45deg);flex-shrink:0}
-.field .fl{font-family:var(--caps);font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream);min-width:130px}
-.field .fd{font-size:.92rem;color:var(--muted)}
-.depth{margin-top:26px}
-.depth .dlabel{display:flex;justify-content:space-between;font-family:var(--caps);font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-.depth .track{height:4px;background:rgba(233,214,192,0.08);position:relative;overflow:hidden}
-.depth .track i{position:absolute;left:0;top:0;bottom:0;width:14%;background:linear-gradient(90deg,var(--gold-deep),var(--gold));transition:width 1.6s ease 2.4s}
-.moat-stage.live .depth .track i{width:92%}
-.depth .dcap{margin-top:10px;font-size:.86rem;color:var(--muted);font-style:italic;font-family:var(--serif)}
+/* ---------- 01 toggle: fragments vs one record ---------- */
+.toggle{margin-top:42px;border:1px solid var(--line-soft);background:var(--ink);padding:34px 38px}
+.tg-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:32px}
+.tg-cap{font-family:var(--caps);font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted)}
+.tg-switch{display:inline-flex;border:1px solid var(--line);border-radius:2px;overflow:hidden}
+.tg-switch button{font-family:var(--caps);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;
+  background:none;border:none;color:var(--muted);padding:11px 20px;cursor:pointer;transition:all .4s ease}
+.tg-switch button.active{background:var(--gold);color:var(--black)}
+.tg-stage{display:grid;min-height:236px;align-items:center}
+.tg-stage > .layer{grid-area:1/1;transition:opacity .6s ease,transform .6s ease}
+/* fragments (original proposal) */
+.layer.scattered{display:flex;justify-content:center;gap:24px;flex-wrap:wrap}
+.frag{width:184px;border:1px dashed rgba(133,126,114,0.55);background:rgba(133,126,114,0.05);padding:24px 18px;text-align:center}
+.frag .ft{font-family:var(--caps);font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#9c958a}
+.frag .fs{font-size:.82rem;color:var(--muted);margin-top:7px}
+/* one structured record (ORVÉA) */
+.layer.unified{display:flex;justify-content:center}
+.record{width:100%;max-width:540px;border:1px solid var(--gold);background:linear-gradient(160deg,rgba(189,154,106,0.10),var(--ink))}
+.record .rrow{display:flex;align-items:flex-start;gap:16px;padding:15px 26px;border-bottom:1px solid var(--line-soft)}
+.record .rdot{width:7px;height:7px;background:var(--gold);transform:rotate(45deg);flex-shrink:0;margin-top:6px}
+.record .rl{font-family:var(--caps);font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--cream);min-width:132px}
+.record .rd{font-size:.9rem;color:var(--muted)}
+.record .rlock{display:flex;align-items:center;gap:10px;padding:14px 26px;color:var(--gold);font-family:var(--caps);font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase}
+.record .rlock svg{width:13px;height:13px;stroke:var(--gold);fill:none;stroke-width:1.6}
+/* state visibility */
+.toggle[data-state="unified"] .unified{opacity:1;transform:none;pointer-events:auto}
+.toggle[data-state="unified"] .scattered{opacity:0;transform:translateY(10px);pointer-events:none}
+.toggle[data-state="scattered"] .scattered{opacity:1;transform:none;pointer-events:auto}
+.toggle[data-state="scattered"] .unified{opacity:0;transform:translateY(10px);pointer-events:none}
+.tg-caption{text-align:center;margin-top:28px;font-family:var(--serif);font-style:italic;font-size:1.12rem;color:var(--cream)}
 
-/* contrast toggle */
-.contrast{margin-top:42px;border:1px solid var(--line-soft);background:var(--ink);padding:34px 38px}
-.ct-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:30px}
-.ct-top .ct-cap{font-family:var(--caps);font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted)}
-.ct-toggle{display:inline-flex;border:1px solid var(--line);border-radius:2px;overflow:hidden}
-.ct-toggle button{font-family:var(--caps);font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;
-  background:none;border:none;color:var(--muted);padding:10px 18px;cursor:pointer;transition:all .3s}
-.ct-toggle button.active{background:var(--gold);color:var(--black)}
-.ct-stage{position:relative;min-height:130px;display:flex;align-items:center;justify-content:center;gap:24px;transition:gap .6s ease}
-.ct-box{width:150px;border:1px dashed var(--line);background:var(--panel);padding:20px 16px;text-align:center;transition:all .6s ease;position:relative;z-index:2}
-.ct-box .bt{font-family:var(--caps);font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--cream)}
-.ct-box .bs{font-size:.8rem;color:var(--muted);margin-top:4px}
-.ct-frame{position:absolute;inset:10px;border:1px solid var(--gold);opacity:0;transition:opacity .6s ease;pointer-events:none}
-.ct-link{position:absolute;top:50%;height:1px;background:var(--gold);opacity:0;transition:opacity .5s ease;z-index:1}
-.contrast.unified .ct-stage{gap:0}
-.contrast.unified .ct-box{border-style:solid;border-color:var(--line);transform:translateY(0)}
-.contrast.unified .ct-frame{opacity:1}
-.contrast.unified .ct-link{opacity:1}
-.contrast.scattered .ct-box{opacity:.62}
-.ct-caption{text-align:center;margin-top:24px;font-family:var(--serif);font-style:italic;font-size:1.1rem;color:var(--cream)}
+/* ---------- 02 stages + constant baseline ---------- */
+.stages{margin-top:18px}
+.stage-row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.stg{border:1px solid var(--line-soft);background:linear-gradient(165deg,var(--panel),var(--ink));border-top:2px solid var(--gold);
+  padding:26px 24px;display:flex;flex-direction:column}
+.stages .stg{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.stages.live .stg{opacity:1;transform:none}
+.stages.live .stg.s0{opacity:.82}
+.stages.live .stg:nth-child(1){transition-delay:0s}
+.stages.live .stg:nth-child(2){transition-delay:.12s}
+.stages.live .stg:nth-child(3){transition-delay:.24s}
+.stages.live .stg:nth-child(4){transition-delay:.36s}
+.stg .snum{font-family:var(--caps);font-size:2.6rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:12px}
+.stg h3{font-family:var(--caps);font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream);margin-bottom:7px;line-height:1.3}
+.stg .sq{font-family:var(--serif);font-style:italic;font-size:1.02rem;color:var(--gold-deep);margin-bottom:16px}
+.stg p{font-size:.92rem;color:var(--text);flex:1;line-height:1.6}
+.stg .snote{margin-top:14px;font-size:.85rem;color:var(--cream);font-style:italic;font-family:var(--serif);border-left:1px solid var(--gold-deep);padding-left:13px}
+.stg .scost{margin-top:18px;padding-top:15px;border-top:1px solid var(--line-soft);font-family:var(--serif);font-style:italic;font-size:1.04rem;color:var(--gold)}
+.stg.s0{border-top-color:var(--gold-deep);padding-bottom:20px}
+.stg.s0 .snum{color:var(--gold-deep)}
+.stg.s3{border-top-width:3px;background:linear-gradient(165deg,rgba(58,48,42,0.42),var(--ink))}
+/* the record: one continuous line beneath every stage */
+.carry{margin-top:22px}
+.carry-layer{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:12px}
+.carry-layer .cl{font-family:var(--caps);font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);
+  padding:9px 6px;text-align:center;border:1px solid var(--line-soft);background:var(--panel)}
+.carry-layer .cl-air{grid-column:1/3}
+.carry-layer .cl-db{grid-column:3/5}
+.carry-line{height:3px;background:rgba(233,214,192,0.08);position:relative;overflow:hidden}
+.carry-line i{position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,var(--gold-deep),var(--gold));transition:width 1.4s ease .35s}
+.stages.live .carry-line i{width:100%}
+.carry-label{margin-top:13px;text-align:center;font-family:var(--serif);font-style:italic;font-size:1.06rem;color:var(--cream)}
+.carry-sub{text-align:center;font-size:.84rem;color:var(--muted);margin-top:4px}
 
-/* ---------- pillar columns (stages / levels) ---------- */
-.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.pillar{border:1px solid var(--line-soft);background:linear-gradient(165deg,var(--panel),var(--ink));border-top:2px solid var(--gold);
-  display:flex;flex-direction:column}
-.pillar .pbar{padding:18px 26px;border-bottom:1px solid var(--line-soft);display:flex;align-items:baseline;gap:12px}
-.pillar .pbar .pk{font-family:var(--caps);font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold)}
-.pillar .pbar .pd{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--cream)}
-.pillar .pbody{padding:26px;flex:1;display:flex;flex-direction:column}
-.pillar .pbody p{font-size:.97rem;color:var(--text);flex:1}
-.pillar .cost{margin-top:22px;padding-top:18px;border-top:1px solid var(--line-soft);font-family:var(--serif);font-style:italic;font-size:1.12rem;color:var(--gold)}
-.pillar .lev{font-family:var(--caps);font-size:2.4rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:14px}
-.pillar h3{font-family:var(--caps);font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream);margin-bottom:16px;line-height:1.3}
+/* ---------- 03 commercial table ---------- */
+.cost-cap{font-family:var(--caps);font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.cost-wrap{display:grid;grid-template-columns:1.7fr 1fr;gap:24px;align-items:start;margin-top:14px}
+.stage-table{width:100%;border:1px solid var(--line);border-collapse:collapse}
+.stage-table th,.stage-table td{border-bottom:1px solid var(--line-soft);padding:16px 18px;text-align:left;vertical-align:top}
+.stage-table thead th{background:var(--panel-2);font-family:var(--caps);font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--line)}
+.stage-table .sname{font-family:var(--caps);font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--cream);display:block}
+.stage-table .buys{font-size:.85rem;color:var(--muted);display:block;margin-top:5px;max-width:300px}
+.stage-table .fig{font-family:var(--serif);font-size:1.06rem;color:var(--text);white-space:nowrap}
+.stage-table .sub{display:block;font-family:var(--sans);font-size:.73rem;color:var(--muted);font-weight:300;margin-top:4px;font-style:normal;white-space:normal}
+.stage-table .r0{opacity:.62}
+.stage-table .r0 .fig,.stage-table .r1 .fig{font-size:.96rem}
+.stage-table .r0 td,.stage-table .r1 td{padding-top:13px;padding-bottom:13px}
+.stage-table .r3{background:linear-gradient(90deg,rgba(189,154,106,0.12),transparent)}
+.stage-table .r3 td{padding-top:24px;padding-bottom:24px;border-bottom:none}
+.stage-table .r3 .sname{color:var(--gold);font-size:13px}
+.stage-table .r3 .fig{font-size:1.4rem;color:var(--gold);font-style:italic}
+.cost-foot{margin-top:14px;font-size:.92rem;color:var(--muted);font-style:italic;font-family:var(--serif)}
+.cost-orig{border:1px solid var(--line-soft);background:var(--panel);padding:26px 24px}
+.cost-orig .co-k{font-family:var(--caps);font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.cost-orig .co-fig{font-family:var(--serif);font-size:1.7rem;color:var(--cream);line-height:1.1}
+.cost-orig .co-fig.sm{font-size:1.2rem;color:var(--text);margin-top:12px}
+.cost-orig .co-s{display:block;font-family:var(--sans);font-size:.77rem;color:var(--muted);font-weight:300;margin-top:4px}
+.cost-orig .co-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--line-soft);font-size:.88rem;color:var(--gold-deep);font-style:italic;font-family:var(--serif)}
 
-/* persistent data layer bar */
-.datalayer{margin-top:16px;border:1px solid var(--line);background:linear-gradient(160deg,rgba(58,48,42,0.4),var(--ink));
-  padding:20px 28px;display:flex;align-items:center;gap:18px}
-.datalayer .dlk{font-family:var(--caps);font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
-.datalayer .dlt{font-size:.96rem;color:var(--text)}
+/* ---------- 04 security progression ---------- */
+.track{margin-top:24px;border:1px solid var(--line-soft);background:var(--ink);padding:32px 30px 28px}
+.track-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tcol{text-align:center}
+.tcol .ts{font-family:var(--caps);font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.tcol .tctrl{border:1px solid var(--line-soft);background:var(--panel);padding:18px 14px;min-height:96px;display:flex;align-items:center;justify-content:center;
+  font-size:.85rem;color:var(--text);line-height:1.45}
+.tcol.light .tctrl{opacity:.66}
+.tcol.boundary .tctrl{border:1px solid var(--gold);background:linear-gradient(160deg,rgba(189,154,106,0.16),var(--ink));color:var(--cream)}
+.tcol.full .tctrl{border-top:3px solid var(--gold);color:var(--cream)}
+.tcol .tctrl b{color:var(--gold);font-weight:600;display:block;margin-bottom:4px;font-family:var(--caps);font-size:9.5px;letter-spacing:0.1em;text-transform:uppercase}
+.track-base{margin-top:14px;border:1px solid var(--line);background:linear-gradient(160deg,rgba(58,48,42,0.4),var(--ink));padding:18px 22px}
+.track-base .tb-k{font-family:var(--caps);font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:13px}
+.track-base .tb-tiers{display:flex;gap:14px;flex-wrap:wrap}
+.track-base .tier{flex:1;min-width:170px;border-left:2px solid var(--gold-deep);padding:4px 0 4px 13px}
+.track-base .tier b{display:block;font-family:var(--caps);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--cream);margin-bottom:3px}
+.track-base .tier span{font-size:.85rem;color:var(--muted)}
+.track-note{margin-top:14px;text-align:right;font-size:.8rem;color:var(--muted);font-style:italic;font-family:var(--serif)}
 
-/* ---------- financial table ---------- */
-.ftable{margin-top:14px;border:1px solid var(--line);border-collapse:collapse;width:100%}
-.ftable th,.ftable td{border:1px solid var(--line);padding:22px 24px;text-align:left;vertical-align:top}
-.ftable thead th{background:var(--panel-2);font-family:var(--caps);font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold)}
-.ftable thead th.hi{color:var(--cream)}
-.ftable tbody th{font-family:var(--caps);font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);width:34%}
-.ftable tbody td{font-family:var(--serif);font-size:1.45rem;color:var(--text)}
-.ftable tbody td.this{color:var(--gold)}
-.ftable .small{font-family:var(--sans);font-size:.82rem;color:var(--muted);display:block;margin-top:4px;font-weight:300}
-
-/* ---------- entity diagram ---------- */
+/* ---------- 05 entity / schema ---------- */
 .entity{display:flex;flex-direction:column;align-items:center;margin-top:10px}
 .enode{border:1px solid var(--line);background:linear-gradient(160deg,rgba(58,48,42,0.32),var(--ink));padding:24px 32px;text-align:center;max-width:440px;width:100%}
 .enode.root{border-color:var(--gold);background:linear-gradient(160deg,rgba(189,154,106,0.16),var(--ink))}
 .enode .en{font-family:var(--caps);font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream);margin-bottom:6px}
 .enode.root .en{color:var(--gold)}
 .enode p{font-size:.92rem;color:var(--muted)}
+.enode.future{border-style:dashed;border-color:var(--line-soft);background:transparent;opacity:.7}
+.enode.future .en{color:var(--muted)}
 .estem{width:1px;height:34px;background:linear-gradient(var(--gold),var(--line))}
+.estem.faint{background:none;border-left:1px dashed var(--line-soft)}
 .ebranch{display:flex;gap:22px;width:100%;max-width:760px;justify-content:center;flex-wrap:wrap}
 .ebranch .enode{max-width:350px}
 
-/* ---------- security ---------- */
-.sec2{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:14px}
-.scard{border:1px solid var(--line-soft);background:linear-gradient(165deg,var(--panel),var(--ink));padding:34px 34px}
-.scard.later{border-top:2px solid var(--gold)}
-.scard .sk{font-family:var(--caps);font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
-.scard h3{font-family:var(--serif);font-style:italic;font-size:1.55rem;color:var(--cream);margin-bottom:20px;font-weight:500;line-height:1.2}
-.dash{list-style:none}
-.dash li{position:relative;padding:11px 0 11px 26px;font-size:.98rem;color:var(--text);border-bottom:1px solid var(--line-soft)}
-.dash li:last-child{border-bottom:none}
-.dash li:before{content:"—";position:absolute;left:0;color:var(--gold)}
-.scard .note{margin-top:18px;font-size:.9rem;color:var(--muted);font-style:italic;font-family:var(--serif)}
-
-/* ---------- questions ---------- */
-.qs{margin-top:10px}
-.qs li{list-style:none;position:relative;padding:22px 0 22px 34px;border-bottom:1px solid var(--line-soft);font-size:1.12rem;color:var(--cream);font-weight:300}
-.qs li:before{content:"—";position:absolute;left:0;color:var(--gold)}
-.next{margin-top:48px;border:1px solid var(--gold);background:linear-gradient(160deg,rgba(189,154,106,0.12),var(--ink));padding:42px 40px;text-align:center}
+/* ---------- close ---------- */
+.next{margin-top:10px;border:1px solid var(--gold);background:linear-gradient(160deg,rgba(189,154,106,0.12),var(--ink));padding:44px 40px;text-align:center}
 .next .kicker{display:block;margin-bottom:16px}
 .next h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.6rem,3.2vw,2.2rem);color:var(--cream);margin-bottom:16px;line-height:1.2}
 .next p{max-width:660px;margin:0 auto;color:var(--text)}
@@ -210,10 +229,21 @@ footer .principles{margin-top:22px;font-family:var(--caps);font-size:11px;font-w
   .nav-links{display:none}.nav-toggle{display:block}
   nav{padding:16px 24px}
   section.sec{padding:74px 24px}
-  .moat-stage{grid-template-columns:1fr;gap:34px;padding:34px 28px}
-  .cols,.sec2{grid-template-columns:1fr}
-  .ftable tbody td{font-size:1.2rem}
-  .datalayer{flex-direction:column;align-items:flex-start;gap:8px}
+  .stage-row{grid-template-columns:1fr 1fr;gap:14px}
+  .carry-layer{grid-template-columns:1fr 1fr}
+  .carry-layer .cl-air{grid-column:1/2}
+  .carry-layer .cl-db{grid-column:2/3}
+  .cost-wrap{grid-template-columns:1fr}
+  .track-grid{grid-template-columns:1fr 1fr}
+  .record .rl{min-width:0}
+}
+@media(max-width:560px){
+  .stage-row,.track-grid{grid-template-columns:1fr}
+  .record .rrow{flex-wrap:wrap}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms !important;transition-duration:.001ms !important}
+  html{scroll-behavior:auto}
 }
 </style>
 </head>
@@ -222,237 +252,257 @@ footer .principles{margin-top:22px;font-family:var(--caps);font-size:11px;font-w
 <nav id="nav">
   <div class="nb">ORVÉA <b>·</b> PRIVATE</div>
   <div class="nav-links">
-    <a href="#s1">01 Idea</a>
-    <a href="#s2">02 Moat</a>
-    <a href="#s3">03 Stages</a>
-    <a href="#s4">04 Cost</a>
-    <a href="#s5">05 Experience</a>
-    <a href="#s6">06 Record</a>
-    <a href="#s7">07 Security</a>
-    <a href="#s8">Next</a>
+    <a href="#s1">01 Data</a>
+    <a href="#s2">02 Stages</a>
+    <a href="#s3">03 Cost</a>
+    <a href="#s4">04 Security</a>
+    <a href="#s5">05 Record</a>
+    <a href="#close">Next</a>
   </div>
   <button class="nav-toggle" id="navToggle">☰</button>
 </nav>
 
 <!-- HERO -->
 <header class="hero">
-  <div class="kicker">ORVÉA Private · Technology approach</div>
-  <h1>How we build.<br>And why.</h1>
+  <div class="wordmark">ORVÉA</div>
+  <div class="wm-private"><span class="wm-line"></span><span class="wm-txt">Private</span><span class="wm-line"></span></div>
+  <div class="tagline">Private Living. <em>Perfected.</em></div>
   <div class="rule"></div>
-  <p class="lead">We recommend building one thing first: the memory of each home. <span class="soft">It is cheap to start, it is the moat, and everything else can wait.</span></p>
+  <div class="hero-kicker">Technology recommendation and rationale</div>
   <div class="scroll-cue">Begin<div class="bar"></div></div>
 </header>
 
-<!-- 01 -->
+<!-- 01 — DATA. DIFFERENTIATION. DISCRETION. -->
 <section class="sec reveal" id="s1">
   <div class="sec-head">
     <span class="kicker">01</span>
-    <h2>The idea is solid</h2>
+    <h2>Data. Differentiation. Discretion.</h2>
     <div class="hr"></div>
-    <p class="sub">We agree on the business. This is about the technology.</p>
+    <p class="sub">The one thing worth building first, and protecting from the start.</p>
   </div>
   <div class="body-copy">
-    <p class="lead-line">The business is sound. A single accountable operator for the whole second home, sold as a recurring relationship, is a real gap in this market.</p>
-    <p>This document is only about the technology: what to build, what to rent, and in what order. On that, our recommendation differs from the original proposal, and the next section explains why.</p>
+    <p>ORVÉA Private's value is its knowledge of each client: their family, their home, and how they see their life perfected. That knowledge is hard to earn and harder still to replicate once gained. It is what sets ORVÉA Private apart, and it is what the technology should be built around.</p>
+    <p>This knowledge is specific, accumulated and extremely private: how to enter each home, how the owner likes it kept, what to stock, what has been done and when, and what "ready" means for this particular family. A competitor can build a similar app in a month. They cannot build this. It is earned one home and one arrival at a time, and it deepens with every visit. Because of what it holds, and the clients it belongs to, protecting it is not a later consideration. It is factored in from the start.</p>
+    <p>Off-the-shelf platforms do not hold knowledge this way. A CRM, a task tool and a notes app each keep a fragment, and the full picture lives nowhere. The original proposal was built on those tools. It would work, but it would silo the very thing that sets ORVÉA Private apart, and make it harder to use as the business grows.</p>
+    <p>Built properly, the knowledge lives in one structured record that can evolve into any future system without losing what makes it valuable. Built poorly, it constrains what can be done, and every change takes longer and costs more.</p>
+    <p class="lead-line">This is why the recommended approach begins with the knowledge itself, and treats the apps and portals as things built on top of it, in time.</p>
+  </div>
+
+  <div class="toggle" id="toggle" data-state="unified">
+    <div class="tg-top">
+      <span class="tg-cap">The same knowledge, held two ways</span>
+      <div class="tg-switch">
+        <button data-state="scattered">Original proposal</button>
+        <button class="active" data-state="unified">ORVÉA Private</button>
+      </div>
+    </div>
+    <div class="tg-stage">
+      <div class="layer scattered">
+        <div class="frag"><div class="ft">A list</div><div class="fs">what to do</div></div>
+        <div class="frag"><div class="ft">A note</div><div class="fs">how they like it</div></div>
+        <div class="frag"><div class="ft">A file</div><div class="fs">what's where</div></div>
+      </div>
+      <div class="layer unified">
+        <div class="record">
+          <div class="rrow"><span class="rdot"></span><span class="rl">Access</span><span class="rd">how to get in</span></div>
+          <div class="rrow"><span class="rdot"></span><span class="rl">Preferences</span><span class="rd">how it's kept</span></div>
+          <div class="rrow"><span class="rdot"></span><span class="rl">Provisioning</span><span class="rd">what to stock</span></div>
+          <div class="rrow"><span class="rdot"></span><span class="rl">Service history</span><span class="rd">what was done</span></div>
+          <div class="rlock">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="1.5"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>
+            Encrypted · access-controlled
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tg-caption" id="tgCap">One structured record. Held in confidence from the first entry.</div>
+  </div>
+
+  <div class="thesis">
+    <p class="big">Own your differentiation. Rent the rest.</p>
+    <p>The sections that follow set out that approach, what it costs, and how it protects what ORVÉA Private knows.</p>
   </div>
 </section>
 
 <div class="divider reveal"><span class="l"></span><span class="d"></span><span class="l r"></span></div>
 
-<!-- 02 -->
+<!-- 02 — THE FOUR STAGES -->
 <section class="sec reveal" id="s2">
   <div class="sec-head">
     <span class="kicker">02</span>
-    <h2>The data is the moat</h2>
+    <h2>The recommended approach: four stages</h2>
     <div class="hr"></div>
-    <p class="sub">The one thing worth building first.</p>
+    <p class="sub">Each stage answers one question before the next begins.</p>
   </div>
   <div class="body-copy">
-    <p>What ORVÉA sells is knowledge: who the client is, how each home runs, what the family prefers. That accumulated record is the real value, and it is what makes ORVÉA hard to copy.</p>
-    <p>A competitor can copy an app in a month. They cannot copy years of knowledge about specific families and homes. Off-the-shelf platforms make this worse: they scatter the data across a CRM, a task tool and notes, and never hold it as one structured record.</p>
-    <p>Done properly, that record is portable to any future system and can sit under any client experience we ever build. Done poorly, it is slow and expensive to fix later.</p>
-    <p class="lead-line">This is why the technology focus is the data first, before apps or portals.</p>
+    <p class="lead-line">The approach builds in four stages. Each one answers a single question before the next begins, so money is only ever committed to something already proven.</p>
   </div>
 
-  <div class="moat-stage" id="moat">
-    <div class="house-wrap">
-      <svg class="house" viewBox="0 0 240 210" aria-hidden="true">
-        <polygon class="fillzone" points="48,96 120,40 192,96 192,182 48,182"></polygon>
-        <polyline class="stroke r0" pathLength="1" points="34,100 120,34 206,100"></polyline>
-        <polyline class="stroke r1" pathLength="1" points="48,96 48,182 192,182 192,96"></polyline>
-        <rect class="stroke r2" pathLength="1" x="102" y="138" width="36" height="44"></rect>
-        <rect class="stroke r3" pathLength="1" x="64" y="116" width="28" height="24"></rect>
-        <rect class="stroke r3" pathLength="1" x="148" y="116" width="28" height="24"></rect>
-      </svg>
-    </div>
-    <div>
-      <div class="fields">
-        <div class="field"><span class="dot"></span><span class="fl">Access</span><span class="fd">how to get in, codes, who holds keys</span></div>
-        <div class="field"><span class="dot"></span><span class="fl">Preferences</span><span class="fd">brands, settings, how the family likes it kept</span></div>
-        <div class="field"><span class="dot"></span><span class="fl">Provisioning</span><span class="fd">what to stock, and when</span></div>
-        <div class="field"><span class="dot"></span><span class="fl">Service history</span><span class="fd">what was done, by whom, and when</span></div>
+  <div class="stages" id="stages">
+    <div class="stage-row">
+      <div class="stg s0">
+        <div class="snum">0</div>
+        <h3>Discover and classify</h3>
+        <div class="sq">What must we know?</div>
+        <p>Before any tool is chosen, map what the service actually requires. Simulate what a client may ask, and what the operator must do to deliver it. Capture, by the simplest means, what information each step needs, and classify each piece for sensitivity, from routine detail to anything that could reveal a home or when it sits empty.</p>
+        <div class="scost">Founder time only</div>
       </div>
-      <div class="depth">
-        <div class="dlabel"><span>Depth of record</span><span>compounding</span></div>
-        <div class="track"><i></i></div>
-        <div class="dcap">Every visit writes back. The record deepens, and ORVÉA gets harder to replace.</div>
+      <div class="stg">
+        <div class="snum">1</div>
+        <h3>Shape the schema</h3>
+        <div class="sq">Can we structure it to last?</div>
+        <p>Turn that picture into a structured, flexible record, built on foundations that can grow rather than a shape borrowed from another company's product. Done quickly and cheaply in a tool like Airtable, where the founder can build, test and feel the structure on their own homes. No external parties, no client data at risk. The value is not the tool. It is the proven schema, portable to whatever is built next.</p>
+        <div class="scost">Tens of dollars a month</div>
+      </div>
+      <div class="stg">
+        <div class="snum">2</div>
+        <h3>Prove the process, and harden it</h3>
+        <div class="sq">Does the process work, safely?</div>
+        <p>Add a simple working interface, not the finished experience, but enough to confirm the whole process runs end to end. This is the first time anyone outside ORVÉA Private touches the system, so the proven schema moves onto a foundation built for real security. A capable database such as Supabase enforces, in the data itself, that a vendor sees only their own job, never a client's identity or a home's occupancy.</p>
+        <div class="scost">Low hundreds a month</div>
+      </div>
+      <div class="stg s3">
+        <div class="snum">3</div>
+        <h3>Build the experience</h3>
+        <div class="sq">Does it meet the brand standard?</div>
+        <p>With the record proven and the process working, build the experience to the brand standard. The client-facing experience takes priority, with operator and vendor surfaces built to match, so everything carrying the ORVÉA Private name feels considered. Security is engineered to its full standard here. Because the Stage 2 foundation is already the right one, this is a refinement, not a rebuild.</p>
+        <div class="snote">Deferring the polished experience is sequencing, not sacrifice. Because the record is structured from day one, any experience can sit on top of it when it is wanted.</div>
+        <div class="scost">The major investment, deferred until proven</div>
       </div>
     </div>
-  </div>
 
-  <div class="contrast unified" id="contrast">
-    <div class="ct-top">
-      <span class="ct-cap">The same knowledge, held two ways</span>
-      <div class="ct-toggle">
-        <button data-state="scattered">Off-the-shelf</button>
-        <button class="active" data-state="unified">ORVÉA</button>
+    <div class="carry">
+      <div class="carry-layer">
+        <div class="cl cl-air">Airtable · modelling</div>
+        <div class="cl cl-db">Database · production</div>
       </div>
+      <div class="carry-line"><i></i></div>
+      <div class="carry-label">The record. One schema, carried across every stage.</div>
+      <div class="carry-sub">The tooling above the line changes from modelling to a real database. The record beneath it never breaks, and is never rebuilt.</div>
     </div>
-    <div class="ct-stage">
-      <span class="ct-link" id="lk1"></span><span class="ct-link" id="lk2"></span>
-      <div class="ct-frame"></div>
-      <div class="ct-box"><div class="bt">CRM</div><div class="bs">who they are</div></div>
-      <div class="ct-box"><div class="bt">Tasks</div><div class="bs">what to do</div></div>
-      <div class="ct-box"><div class="bt">Notes</div><div class="bs">how they like it</div></div>
-    </div>
-    <div class="ct-caption" id="ctCap">One structured record</div>
   </div>
 </section>
 
 <div class="divider reveal"><span class="l"></span><span class="d"></span><span class="l r"></span></div>
 
-<!-- 03 -->
+<!-- 03 — WHAT IT COSTS -->
 <section class="sec reveal" id="s3">
   <div class="sec-head">
     <span class="kicker">03</span>
-    <h2>The three stages</h2>
+    <h2>What it costs</h2>
     <div class="hr"></div>
-    <p class="sub">Build the record first. Add experience as it earns its place.</p>
+    <p class="sub">Not necessarily less in total. Committed last, not first.</p>
   </div>
-  <div class="cols">
-    <div class="pillar">
-      <div class="pbar"><span class="pk">Stage 0</span><span class="pd">Set up &amp; test the schema</span></div>
-      <div class="pbody">
-        <p>Build the structured record and prove it on Laura's own homes. Real vendors, manual coordination, no portals.</p>
-        <div class="cost">Tens of dollars a month</div>
-      </div>
-    </div>
-    <div class="pillar">
-      <div class="pbar"><span class="pk">Stage 1</span><span class="pd">A basic client experience</span></div>
-      <div class="pbody">
-        <p>Same record, unchanged. Add a thin, branded client view on top and light automation.</p>
-        <div class="cost">Low hundreds a month</div>
-      </div>
-    </div>
-    <div class="pillar">
-      <div class="pbar"><span class="pk">Stage 2</span><span class="pd">Experience, security &amp; scale</span></div>
-      <div class="pbody">
-        <p>The proven record becomes the blueprint for a real database. Build the full client, operator and vendor experiences, and the stronger security, on top. Migration is an export, not a rebuild.</p>
-        <div class="cost">When volume justifies it</div>
-      </div>
-    </div>
+  <div class="body-copy">
+    <p>This approach does not necessarily reduce the total cost of reaching a finished platform. What it changes is when the money is required. Almost all meaningful spend is held back until the model is proven, so very little capital is at risk before there is any evidence the business works.</p>
+    <p>The early stages are inexpensive on purpose. Their job is to prove the differentiating asset, the schema, and to set the security foundation correctly, before a single dollar is committed to building an experience. The money follows the same two principles as the rest of this recommendation. Spend first on what differentiates, and on what protects.</p>
+    <p class="lead-line">The original proposal commits most of its cost at the start, before the model is validated. This approach commits it last.</p>
   </div>
-  <div class="datalayer">
-    <span class="dlk">The record</span>
-    <span class="dlt">One structured store, unchanged across every stage. The experience above it grows; the data beneath it stays put.</span>
+
+  <div class="cost-cap">Indicative · AUD · plus or minus 30 percent</div>
+  <div class="cost-wrap">
+    <div>
+      <table class="stage-table">
+        <thead>
+          <tr><th>Stage</th><th>Setup</th><th>Per month</th></tr>
+        </thead>
+        <tbody>
+          <tr class="r0">
+            <td><span class="sname">Stage 0 · Discover &amp; classify</span><span class="buys">The map of what to capture, and how sensitive each part is</span></td>
+            <td class="fig">Nil</td>
+            <td class="fig">Nil</td>
+          </tr>
+          <tr class="r1">
+            <td><span class="sname">Stage 1 · Shape the schema</span><span class="buys">The proven, owned data structure, tested on real homes</span></td>
+            <td class="fig">Nil–$300</td>
+            <td class="fig">$30–$80</td>
+          </tr>
+          <tr class="r2">
+            <td><span class="sname">Stage 2 · Prove &amp; harden</span><span class="buys">A working end-to-end process and an enforced vendor boundary</span></td>
+            <td class="fig">$2,000–$6,000</td>
+            <td class="fig">$250–$500</td>
+          </tr>
+          <tr class="r3">
+            <td><span class="sname">Stage 3 · Build the experience</span><span class="buys">The full client, operator and vendor experience, at the brand standard</span></td>
+            <td class="fig">Significant<span class="sub">the major investment, deferred until proven</span></td>
+            <td class="fig">Scales<span class="sub">with the build</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="cost-foot">Cumulative before Stage 3: low thousands to set up, a few hundred a month. The model is proven before the major spend.</div>
+    </div>
+    <aside class="cost-orig">
+      <div class="co-k">The original proposal</div>
+      <div class="co-fig"><span class="countup" data-prefix="$" data-from="0" data-to="11000" data-suffix="–$24,000">$11,000–$24,000</span><span class="co-s">to set up</span></div>
+      <div class="co-fig sm"><span class="countup" data-prefix="$" data-from="0" data-to="500" data-suffix="–$1,300 / mo">$500–$1,300 / mo</span><span class="co-s">recurring</span></div>
+      <div class="co-note">Committed largely up front, before the model is validated.</div>
+    </aside>
+  </div>
+
+  <div class="thesis">
+    <span class="big">The same destination, reached for far less capital at risk.</span>
+    <p>Less is committed before it is known to work.</p>
   </div>
 </section>
 
 <div class="divider reveal"><span class="l"></span><span class="d"></span><span class="l r"></span></div>
 
-<!-- 04 -->
+<!-- 04 — SECURITY -->
 <section class="sec reveal" id="s4">
   <div class="sec-head">
     <span class="kicker">04</span>
-    <h2>What it costs</h2>
+    <h2>Security</h2>
     <div class="hr"></div>
-    <p class="sub">This approach, versus the original proposal.</p>
+    <p class="sub">Classify early, control progressively.</p>
   </div>
   <div class="body-copy">
-    <p>This approach proves the model for tens of dollars a month before committing real money. The original proposal points to a broader platform, committed before a single client is validated.</p>
+    <p>Discretion is the product, so security is not a final stage. It is decided at the start and built up as exposure grows.</p>
+    <p>The decision is made early. In Stage 0, every piece of information is classified by how damaging its exposure would be, the most sensitive being anything that reveals a home's security, or when it sits empty. That judgement is made before any tool is chosen, and it does not change.</p>
+    <p>The controls grow with exposure. While only the founder uses the system, light controls are enough. The first real test comes at Stage 2, when a vendor is given access and must see only their assigned job, a genuine boundary enforced in the data itself, not a field hidden on a screen. That is why the schema moves onto a proper database at this point. The full standard a security-conscious client expects is engineered at Stage 3.</p>
   </div>
-  <table class="ftable" id="ftable">
-    <thead>
-      <tr>
-        <th></th>
-        <th class="hi">This approach · Stage 0</th>
-        <th>Original proposal · up front</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Set-up cost</th>
-        <td class="this">Tens of dollars<span class="small">per month, all in</span></td>
-        <td><span class="countup" data-prefix="$" data-from="0" data-to="11000" data-suffix="–$24,000">$11,000–$24,000</span><span class="small">one-off, before launch</span></td>
-      </tr>
-      <tr>
-        <th>Ongoing</th>
-        <td class="this">Included<span class="small">in the figure above</span></td>
-        <td><span class="countup" data-prefix="$" data-from="0" data-to="500" data-suffix="–$1,300 / mo">$500–$1,300 / mo</span><span class="small">recurring</span></td>
-      </tr>
-      <tr>
-        <th>Committed before first client</th>
-        <td class="this">No<span class="small">prove it, then spend</span></td>
-        <td>Yes<span class="small">capital at risk up front</span></td>
-      </tr>
-    </tbody>
-  </table>
+
+  <div class="track">
+    <div class="track-grid">
+      <div class="tcol light">
+        <div class="ts">Stage 0</div>
+        <div class="tctrl"><span><b>Classify</b>tiers set, once</span></div>
+      </div>
+      <div class="tcol light">
+        <div class="ts">Stage 1</div>
+        <div class="tctrl"><span><b>Light controls</b>restricted access · encrypted storage</span></div>
+      </div>
+      <div class="tcol boundary">
+        <div class="ts">Stage 2</div>
+        <div class="tctrl"><span><b>Vendor boundary</b>enforced in the data, not the screen</span></div>
+      </div>
+      <div class="tcol full">
+        <div class="ts">Stage 3</div>
+        <div class="tctrl"><span><b>Full standard</b>residency · audit · masking · isolation</span></div>
+      </div>
+    </div>
+    <div class="track-base">
+      <div class="tb-k">Classification · set once at Stage 0, unchanged</div>
+      <div class="tb-tiers">
+        <div class="tier"><b>Routine</b><span>operational detail</span></div>
+        <div class="tier"><b>Private</b><span>client detail</span></div>
+        <div class="tier"><b>High-risk</b><span>reveals a home, or when it's empty</span></div>
+      </div>
+    </div>
+    <div class="track-note">Assessed in detail separately.</div>
+  </div>
+
   <div class="thesis">
-    <span class="big">Same destination if the model proves out.</span>
-    <p>Far less capital at risk to find out.</p>
+    <span class="big">Classify early, control progressively.</span>
+    <p>A borrowed platform protects data the way its maker designed. A record ORVÉA Private owns can be protected the way this business, and these clients, require.</p>
   </div>
 </section>
 
 <div class="divider reveal"><span class="l"></span><span class="d"></span><span class="l r"></span></div>
 
-<!-- 05 -->
+<!-- 05 — THE RECORD -->
 <section class="sec reveal" id="s5">
   <div class="sec-head">
     <span class="kicker">05</span>
-    <h2>The client experience</h2>
-    <div class="hr"></div>
-    <p class="sub">A sequencing choice, not a sacrifice.</p>
-  </div>
-  <div class="body-copy">
-    <p>Deferring the polished experience is a sequencing choice, not a sacrifice. The screen is a window onto the record; building it before the record is proven means polishing something about to change. Because the data is structured, a real experience is cheap to add when we want it.</p>
-  </div>
-  <div class="cols">
-    <div class="pillar">
-      <div class="pbody">
-        <div class="lev">A</div>
-        <h3>The prototype, now</h3>
-        <p>A clickable client experience already built, to show the look and feel.</p>
-        <div class="cost">Ready today</div>
-      </div>
-    </div>
-    <div class="pillar">
-      <div class="pbody">
-        <div class="lev">B</div>
-        <h3>A real branded view, weeks if wanted</h3>
-        <p>A genuine branded client view on the live record: homes, requests, status.</p>
-        <div class="cost">One to two weeks · low cost</div>
-      </div>
-    </div>
-    <div class="pillar">
-      <div class="pbody">
-        <div class="lev">C</div>
-        <h3>The bespoke experience, later</h3>
-        <p>Fully custom client, operator and vendor surfaces with full polish.</p>
-        <div class="cost">At Stage 2</div>
-      </div>
-    </div>
-  </div>
-  <div class="body-copy" style="margin-top:34px">
-    <p>What we give up by waiting is testing the brand experience and client trust early. For a luxury service that matters, so we are clear about it. The first real client is there to test exactly that.</p>
-  </div>
-</section>
-
-<div class="divider reveal"><span class="l"></span><span class="d"></span><span class="l r"></span></div>
-
-<!-- 06 -->
-<section class="sec reveal" id="s6">
-  <div class="sec-head">
-    <span class="kicker">06</span>
     <h2>The record, in a little more detail</h2>
     <div class="hr"></div>
     <p class="sub">Built around the relationship, not the building.</p>
@@ -463,7 +513,7 @@ footer .principles{margin-top:22px;font-family:var(--caps);font-size:11px;font-w
   <div class="entity">
     <div class="enode root">
       <div class="en">Member &amp; family</div>
-      <p>The root: the long-term relationship that carries everything ORVÉA will ever do. Property today, travel and lifestyle later.</p>
+      <p>The root: the long-term relationship that carries everything ORVÉA Private will ever do.</p>
     </div>
     <div class="estem"></div>
     <div class="ebranch">
@@ -471,80 +521,26 @@ footer .principles{margin-top:22px;font-family:var(--caps);font-size:11px;font-w
         <div class="en">Each property</div>
         <p>Access, preferences, provisioning, condition, and the history of everything done there.</p>
       </div>
-      <div class="enode">
+      <div class="enode future">
         <div class="en">Future services</div>
-        <p>Attach to the member directly, so expanding beyond property never means rebuilding the foundation.</p>
+        <p>Travel and lifestyle, later. They attach to the member directly, so expanding beyond property never means rebuilding the foundation.</p>
       </div>
     </div>
   </div>
   <div class="thesis">
     <span class="big">From "someone cleaned" to "the home meets the standard this family expects."</span>
-    <p>Each home holds a written definition of what "to standard" means, and quality checks are measured against it. Every completed job writes back, so the record deepens with every visit.</p>
+    <p>Each home holds a written definition of what "to standard" means, and every completed job is measured against it and written back, so the record deepens with every visit.</p>
   </div>
 </section>
 
 <div class="divider reveal"><span class="l"></span><span class="d"></span><span class="l r"></span></div>
 
-<!-- 07 -->
-<section class="sec reveal" id="s7">
-  <div class="sec-head">
-    <span class="kicker">07</span>
-    <h2>Security</h2>
-    <div class="hr"></div>
-    <p class="sub">Discretion is the product, so security gets a straight answer.</p>
-  </div>
-  <div class="sec2">
-    <div class="scard">
-      <div class="sk">Now</div>
-      <h3>Secure enough to prove the model</h3>
-      <ul class="dash">
-        <li>Client login</li>
-        <li>Each client sees only their own information</li>
-        <li>Encrypted storage</li>
-      </ul>
-      <p class="note">Low effort on the early tooling, right for a pilot with trusted early clients.</p>
-    </div>
-    <div class="scard later">
-      <div class="sk">Later · Stage 2</div>
-      <h3>Bank-grade for the most security-conscious client</h3>
-      <ul class="dash">
-        <li>Full data residency control</li>
-        <li>Masking which home is empty</li>
-        <li>Complete audit trails</li>
-        <li>Isolated environments</li>
-      </ul>
-      <p class="note">Not fully solvable on early tooling, under any approach, and so part of Stage 2.</p>
-    </div>
-  </div>
-  <div class="thesis">
-    <span class="big">A Stage 2 conversation, by design.</span>
-    <p>The pilot is built to prove the model with people who trust us, not to onboard the most security-conscious client on day one.</p>
-  </div>
-</section>
-
-<div class="divider reveal"><span class="l"></span><span class="d"></span><span class="l r"></span></div>
-
-<!-- 08 -->
-<section class="sec reveal" id="s8">
-  <div class="sec-head">
-    <span class="kicker">What we need from you</span>
-    <h2>A few decisions firm up the rest</h2>
-    <div class="hr"></div>
-    <p class="sub">Even rough answers move us from theory to a build order.</p>
-  </div>
-  <ul class="qs">
-    <li>Is lifestyle and concierge in scope at launch, or property care only?</li>
-    <li>What service request categories can clients choose from?</li>
-    <li>What defines "done to standard" for a home, and who owns that definition?</li>
-    <li>What are the response-time commitments by tier?</li>
-    <li>What should the record hold, and who keeps it current?</li>
-    <li>How do vetted vendors get into a home, and how do we handle a job revealing when a home is empty?</li>
-    <li>Are furnishings a launch service, or handled case by case at first?</li>
-  </ul>
+<!-- CLOSE -->
+<section class="sec reveal" id="close">
   <div class="next">
     <span class="kicker">Recommended next step</span>
-    <h3>Stand up Stage 0 on Laura's own homes</h3>
-    <p>It is cheap, it proves the model where it matters most, and it begins building the one asset no competitor can buy.</p>
+    <h3>Begin at Stage 0, on the founders' own homes</h3>
+    <p>It costs only founder time, it proves the model where it matters most, and it begins building the one asset no competitor can buy: the record itself.</p>
   </div>
 </section>
 
@@ -559,38 +555,35 @@ footer .principles{margin-top:22px;font-family:var(--caps);font-size:11px;font-w
 const nav=document.getElementById('nav');
 addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
 
-// reveal
+// reveal on scroll
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:0.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-// 02 signature: trigger once when in view
-const moat=document.getElementById('moat');
-new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('live');o.unobserve(e.target)}}),{threshold:0.4}).observe(moat);
-
-// 02 contrast toggle
-const contrast=document.getElementById('contrast'),ctCap=document.getElementById('ctCap');
-function placeLinks(){
-  const boxes=contrast.querySelectorAll('.ct-box');
-  if(boxes.length<3)return;
-  const stage=contrast.querySelector('.ct-stage').getBoundingClientRect();
-  const a=boxes[0].getBoundingClientRect(),b=boxes[1].getBoundingClientRect(),c=boxes[2].getBoundingClientRect();
-  const l1=document.getElementById('lk1'),l2=document.getElementById('lk2');
-  l1.style.left=(a.right-stage.left)+'px';l1.style.width=(b.left-a.right)+'px';
-  l2.style.left=(b.right-stage.left)+'px';l2.style.width=(c.left-b.right)+'px';
+// 01 toggle: fragments vs one record
+const tg=document.getElementById('toggle');
+if(tg){
+  const cap=document.getElementById('tgCap');
+  const caps={
+    unified:'One structured record. Held in confidence from the first entry.',
+    scattered:'Three fragments. The full picture lives nowhere.'
+  };
+  tg.querySelectorAll('.tg-switch button').forEach(b=>b.addEventListener('click',()=>{
+    const s=b.dataset.state;
+    tg.querySelectorAll('.tg-switch button').forEach(x=>x.classList.toggle('active',x===b));
+    tg.dataset.state=s;
+    if(cap)cap.textContent=caps[s];
+  }));
 }
-contrast.querySelectorAll('.ct-toggle button').forEach(btn=>btn.addEventListener('click',()=>{
-  const s=btn.dataset.state;
-  contrast.querySelectorAll('.ct-toggle button').forEach(x=>x.classList.remove('active'));
-  btn.classList.add('active');
-  contrast.classList.remove('scattered','unified');contrast.classList.add(s);
-  ctCap.textContent=s==='unified'?'One structured record':'Scattered across three tools';
-  requestAnimationFrame(placeLinks);
-}));
-addEventListener('resize',placeLinks);setTimeout(placeLinks,400);
 
-// 04 count-up once
+// 02 stages: reveal blocks + draw the constant baseline once
+const stages=document.getElementById('stages');
+if(stages)new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('live');o.unobserve(e.target)}}),{threshold:0.3}).observe(stages);
+
+// 03 restrained count-up on the original-proposal figures
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
 function countup(el){
   const to=+el.dataset.to,from=+el.dataset.from||0,pre=el.dataset.prefix||'',suf=el.dataset.suffix||'';
+  if(reduce){el.textContent=pre+to.toLocaleString()+suf;return}
   const dur=1100,t0=performance.now();
   function step(t){
     const p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3),v=Math.round(from+(to-from)*e);
@@ -599,10 +592,10 @@ function countup(el){
   }
   requestAnimationFrame(step);
 }
-const ft=new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){
-  document.querySelectorAll('#ftable .countup').forEach(countup);o.disconnect();
-}}),{threshold:0.4});
-const ftbl=document.getElementById('ftable');if(ftbl)ft.observe(ftbl);
+const costSec=document.getElementById('s3');
+if(costSec)new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){
+  costSec.querySelectorAll('.countup').forEach(countup);o.disconnect();
+}}),{threshold:0.3}).observe(costSec);
 
 // active nav link
 const secs=[...document.querySelectorAll('section.sec')],links=[...document.querySelectorAll('.nav-links a')];
